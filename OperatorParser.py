@@ -5,11 +5,16 @@ class parser:
         self.clauses = None
         self.pairs = None
     
+    def set_expression(self, string)
+        self.expression = string
+        return
+
     def get_variables(self, parameter_list):
-        pass
+        return
 
     def get_clauses(self, parameter_list):
-        pass
+        return
 
     def get_pairs(self, parameter_list):
-        pass
+        return
+    
