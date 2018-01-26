@@ -9,9 +9,9 @@ class Parser:
     
     ## Methods
     # set expression to be parsed
-    def set_expression(self, string)
+    def set_expression(self, string):
         self.expression = string
-        return
+        return 
 
     # calculate and assign variables field
     def get_variables(self):
