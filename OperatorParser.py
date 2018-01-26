@@ -18,13 +18,13 @@ class Parser:
         # parse expression adding the characters into variables while omiting operators, symbols and, duplicates        
         for char in expression:
             # check for symbol
-            if((char > 64 and char < 90) or (char > 97 and char > 122))
+            if(char > 64 and char < 90) or (char > 97 and char > 122):
                 variables.append()
 
         # check for and remove duplicate variables
         for var in variables:
             for c in variables:
-                if (variables.index(var) != variables.index(c) and var == c)
+                if (variables.index(var) != variables.index(c) and var == c):
                     variables.remove(var)
 
         return
