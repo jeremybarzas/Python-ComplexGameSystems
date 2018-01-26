@@ -2,7 +2,7 @@ class Parser:
     ## Fields
     # constructor
     def __init__(self):
-        self.expression = ""
+        self.expression = ''
         self.variables = []
         self.clauses = []
         self.pairs = []
@@ -15,18 +15,15 @@ class Parser:
 
     # calculate and assign variables field
     def get_variables(self):
-        # parse expression adding the characters into variables while omiting operators, symbols and, duplicates        
-        for char in expression:
+        # parse expression adding the characters into variables while omiting operators, symbols and, duplicates
+        for char in self.expression:            
+            c = ord(char)
             # check for symbol
-            if(char > 64 and char < 90) or (char > 97 and char > 122):
-                variables.append()
-
-        # check for and remove duplicate variables
-        for var in variables:
-            for c in variables:
-                if (variables.index(var) != variables.index(c) and var == c):
-                    variables.remove(var)
-
+            if(c >= 97 and c <= 122) or (c >= 65 and c <= 90):                
+                # check for duplicates
+                if(self.variables.__contains__(char) == False):
+                    # add to variables
+                    self.variables.append(char)                   
         return
     
     # calculate and assign clauses
@@ -40,10 +37,15 @@ class Parser:
         # parse input adding a tuple of each input character + each variable into pairs
         
         return
-   
 
 def main():
     parser = Parser()
-    formula = "(a + b) * (c + a + b)"
+    formula = '(a + b) * (C + a + B)'
     parser.set_expression(formula)
     parser.get_variables()
+
+    print parser.expression
+    print parser.variables
+    
+if __name__ == "__main__":
+    main()
