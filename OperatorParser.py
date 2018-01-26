@@ -49,4 +49,3 @@ def main():
     parser.get_variables()
 
     print parser.variables
-
