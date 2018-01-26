@@ -47,5 +47,3 @@ def main():
     formula = "(a + b) * (c + a + b)"
     parser.set_expression(formula)
     parser.get_variables()
-
-    print parser.variables
